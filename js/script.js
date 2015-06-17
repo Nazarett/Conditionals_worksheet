@@ -15,22 +15,23 @@ heavyWeight = (heavyWeight >= 250) ? "You are a heavy weight" : "You will have t
 //Do you have to stop
 //Have enough gas to stop later
 
-var gasStationDist = 200; //Miles
-var gasEfficiency = 37; //Mpg
-var gasTankPercent = 25; //25% = .25
+var nextGasStationDist = 200; //Miles
+var gasEfficiency = 38; //Mpg
+var gasTankPercent = 26; //25% = .25
 var tankCapicity = 30; //Gallons 25% = 7.5 gallons
 
-console.log("The gas station is " + gasStationDist + " miles away.");//Distance of gas station.
+console.log("The gas station is " + nextGasStationDist + " miles away.");//Distance of next gas station.
 console.log("My car does " + gasEfficiency + " mpg."); //Gas efficiency of vehicle in miles per gallon.
 console.log("I have " + gasTankPercent + "% left on my tank."); //Whats left in the tank in percentage.
 console.log("The tank of my car can hold up to " + tankCapicity + " gallons"); //Max of gallons that car can handle
 
 
-if(gasStationDist <= 200 || gasTankPercent <= 25){ //Condition that will decide if stopping or not
+if(gasTankPercent <= 25 || tankCapicity < 7 || gasEfficiency<= 37 || nextGasStationDist >= 200){
+    console.log("We will stop to get gas.");
 
-    console.log("We will stop to get gas");
 
-
-}else{console.log("We will keep driving")
-
+}else{
+    console.log("We will drive 200 miles for the next gas station.")
 }
+
+
