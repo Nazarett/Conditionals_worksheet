@@ -19,6 +19,7 @@ var nextGasStationDist = 200; //Miles
 var gasEfficiency = 37; //Mpg
 var gasTankPercent = 25; //25% = .25
 var tankCapicity = 30; //Gallons 25% = 7.5 gallons
+var gasLeft = (tankCapicity * gasTankPercent / 100); // calculation for gas left
 
 console.log("The gas station is " + nextGasStationDist + " miles away.");//Distance of next gas station.
 console.log("My car does " + gasEfficiency + " mpg."); //Gas efficiency of vehicle in miles per gallon.
@@ -26,8 +27,8 @@ console.log("I have " + gasTankPercent + "% left on my tank."); //Whats left in 
 console.log("The tank of my car can hold up to " + tankCapicity + " gallons"); //Max of gallons that car can handle
 
 
-if(gasTankPercent <= 25 || nextGasStationDist >= 200){
-    var gasLeft = (tankCapicity * gasTankPercent / 100);
+if(gasTankPercent <=25 && gasLeft < 8 || nextGasStationDist >= 200){
+
     console.log("You only have " + gasLeft + " gallons of gas in your tank, better get gas now while you can”")
 
 
