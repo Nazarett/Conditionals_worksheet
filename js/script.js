@@ -20,8 +20,17 @@ var gasEfficiency = 37; //Mpg
 var gasTankPercent = 25; //25% = .25
 var tankCapicity = 30; //Gallons 25% = 7.5 gallons
 
-console.log("The gas station is " + gasStationDist + " miles away.");
-console.log("My car does " + gasEfficiency + " mpg.");
-console.log("I have " + gasTankPercent + "% left on my tank.");
-console.log("The tank of my car can hold up to " + tankCapicity + " gallons");
+console.log("The gas station is " + gasStationDist + " miles away.");//Distance of gas station.
+console.log("My car does " + gasEfficiency + " mpg."); //Gas efficiency of vehicle in miles per gallon.
+console.log("I have " + gasTankPercent + "% left on my tank."); //Whats left in the tank in percentage.
+console.log("The tank of my car can hold up to " + tankCapicity + " gallons"); //Max of gallons that car can handle
 
+
+if(gasStationDist <= 200 || gasTankPercent <= 25){ //Condition that will decide if stopping or not
+
+    console.log("We will stop to get gas");
+
+
+}else{console.log("We will keep driving")
+
+}
