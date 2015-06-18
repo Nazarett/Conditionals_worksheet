@@ -39,4 +39,19 @@ if(gasTankPercent <=25 && gasLeft < 8 || nextGasStationDist >= 200){
 
 //Check the login
 
-//
+var userName = prompt("Welcome enter username" ); //Prompt for the username
+
+if(userName === "admin"){ //Making username equal to admin and only admin
+    console.log(userName);
+    var password = prompt("Password"); //Prompt for password
+    if(password === "123"){ //Making password equal to 123 and only 123
+        console.log(password)
+        alert("You have succesfully logged in") //Alert for entering correct username and password
+
+    }else{alert("Password does not match our records") // Alert for entering incorrect password
+
+    }
+
+}else{ alert("Username not found.Try again") //Alert for entering incorrect username
+
+}
